@@ -29,6 +29,8 @@ SOLUTION 👇🏼
 
 
 
+
+
 // With comments: 
 
 // Store variables for Mark
@@ -61,6 +63,7 @@ console.log(resultMessage);
 
 
 
+
 /* ------------------------------------ */
 
 // Without comments: 
@@ -87,3 +90,7 @@ var higherBMI = markMass > johnMass;
 var resultMessage = 'Is Mark\'s BMI higher than John\'s?' + ' ' + higherBMI;
 
 console.log(resultMessage);
+
+
+
+
