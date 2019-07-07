@@ -5,7 +5,7 @@ Level: Beginner
 CODING CHALLENGE 1
 
 
-/*
+
 
 Mark and John are trying to compare their BMI (Body Mass Index), 
 which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). 
@@ -32,6 +32,7 @@ SOLUTION 👇🏼
 
 
 // With comments: 
+
 
 // Store variables for Mark
 
