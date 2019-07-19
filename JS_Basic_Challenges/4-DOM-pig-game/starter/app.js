@@ -11,8 +11,10 @@ GAME RULES:
 
 */
 
-var totalScore, currentScore, activePlayer;
+var totalScore, currentScore, activePlayer, dice;
 
 var totalScore = [0,0];    // the total score each player has, added together, after multiple rounds of rolling the dice
 var currentScore = 0;       // the score each player has per round/ session, when it's they're actively rolling the dice 
 var activePlayer = 0;     // the player that is currently rolling the dice 
+
+dice = Math.floor(Math.random() * 6) + 1;  // create a dice that generates a random number from 1 to 6 (included)
