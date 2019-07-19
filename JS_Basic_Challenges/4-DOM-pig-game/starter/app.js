@@ -11,5 +11,8 @@ GAME RULES:
 
 */
 
+var totalScore, currentScore, activePlayer;
 
-var scores = [0,0];
+var totalScore = [0,0];    // the total score each player has, added together, after multiple rounds of rolling the dice
+var currentScore = 0;       // the score each player has per round/ session, when it's they're actively rolling the dice 
+var activePlayer = 0;     // the player that is currently rolling the dice 
