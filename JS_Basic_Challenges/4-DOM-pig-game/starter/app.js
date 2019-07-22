@@ -39,7 +39,7 @@ document.getElementById('current-1').textContent = '0';
 
 
 // Add the event listener to the button that rolls the dice, using the .addEventListener method
-// An event listener is a function that is only triggered (by the user) when a specific event happens (click, scroll, ...). 
+// The event listener controls (through a function) what happens when the user clicks on the 'roll dice' button.
 document.querySelector('.btn-roll').addEventListener('click', function(){
 
   // 1. Create a random number from 1 to 6 (included) that imitates throwing a dice.
@@ -62,7 +62,29 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
   diceDOM.src = 'dice-' + dice + '.png';
 
   // 3. Update the new value after rolling the dice, as long as the rolled number is NOT 1 (see game rules above).
+  if (dice !== 1) {
+    // If the dice value is NOT 1:
+    // 1. Update the currentScore with the new dice value.
+    currentScore = currentScore + dice;
+    // 2. Display the updated currentScore in our UI.
+    document.querySelector('#current-'  + activePlayer).textContent = currentScore;
+  } else {
+    // If the dice value is 1: 
+    // 1. Switch to the opposite player. (0 or 1) 
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    
+    // 2. Reset the current score to 0, so that next player doesn't inherit the other players last dice value.
+    // currentScore = 0;
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
 
+    // 3. Change the style of the card when the player is active. The style has switch between the 2 players.
+    // The 'classList' property is useful to add, remove and toggle CSS classes on an element.
+    // Remove the 'active' class that is initially set by default to player 0.
+    document.querySelector('.player-0-panel').classList.remove('active');
+    // Remove the 'active' class that is initially set by default to player 0.
+    document.querySelector('.player-1-panel').classList.add('active');
+  }
 });
 
 // document.querySelector('#current-'  + activePlayer).textContent = dice;
