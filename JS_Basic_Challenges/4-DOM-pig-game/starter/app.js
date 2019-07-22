@@ -32,6 +32,11 @@ var activePlayer = 0;       // the player that is currently rolling the dice (ca
 // The dice is now hidden when user first loads the page and hasn't started rolling the dice yet.
 document.querySelector('.dice').style.display = 'none';
 
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
 
 // Add the event listener to the button that rolls the dice, using the .addEventListener method
 // An event listener is a function that is only triggered (by the user) when a specific event happens (click, scroll, ...). 
