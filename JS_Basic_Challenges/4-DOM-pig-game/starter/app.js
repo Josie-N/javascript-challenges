@@ -19,9 +19,17 @@ var activePlayer = 0;       // the player that is currently rolling the dice (ca
 
 dice = Math.floor(Math.random() * 6) + 1;  // create a dice that generates a random number from 1 to 6 (included)
 
+// Setting a value
 // Use the 'querySelector' method to select and change the value of the html element with the id starting with "current-". 
 // The 'textContent' property sets or returns the text content of the node you specify. In our case, that's the dice value of the player rolling it.
 // Use concatenation (+) to create a dynamic class; the player can either be 0 (id="current-0") or 1 (id="current-1").
 document.querySelector('#current-'  + activePlayer).textContent = dice;
 // Longer version: document.querySelector('#current-' + activePlayer).textContent = Math.floor(Math.random() * 6) + 1;
 
+// Getting a value
+// Read the value or the content of the element with this id (id="score-0"), and then store it into variable x.
+var x = document.querySelector('#score-0').textContent;
+
+// Change the style of the dice using the style method and selecting the '.dice' class
+// The dice is now hidden when user first loads the page and hasn't started rolling the dice yet.
+document.querySelector('.dice').style.display = 'none';
