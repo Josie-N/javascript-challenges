@@ -48,6 +48,18 @@ Dont forget to:
 - Store the new array we created in a variable
 // Result: [ '$5.00', '$4.23', '$6.40', '$8.09', '$3.20' ];
 
+--------------------------
+
+Challenge 4:
+
+Use the map method on the daysOfWeek array, creating a new array of abbreviated week days.
+- Each abbreviated string should be the first three letters of the long version in daysOfWeek.
+- Store the new array in the variable abbreviatedDays.
+
+// Initial: const daysOfWeek = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+
+// Result: const daysOfWeek = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
+
 
 SOLUTIONS 👇🏼 
 
@@ -82,4 +94,12 @@ const priceTags = prices.map(priceToDollars);
 // Challenge 3 - easier solution
 const prices = [5, 4.23, 6.4, 8.09, 3.20];
 const priceTags = prices.map(price => '$' + price.toFixed(2));
+
+
+// Challenge 4
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let abbreviatedDays;
+
+abbreviatedDays = daysOfWeek.map(weekDay => weekDay.slice(0,3));
 
