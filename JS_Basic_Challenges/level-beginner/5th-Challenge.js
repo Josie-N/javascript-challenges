@@ -49,6 +49,37 @@ Dont forget to:
 // Result: [ '$5.00', '$4.23', '$6.40', '$8.09', '$3.20' ];
 
 
-SOLUTION 👇🏼 
+SOLUTIONS 👇🏼 
 
 */
+
+
+
+
+
+
+
+
+
+
+// Without comments: 
+
+// Challenge 1
+const strings = ['1','2','3','4','5'];
+const numbers = strings.map(string => parseInt(string, 10));
+
+
+// Challenge 2
+const fruits = ['apple', 'pear', 'cherry'];
+const capitalizedFruits = fruits.map(fruit => fruit.toUpperCase());
+
+
+// Challenge 3 - more complex solution
+const prices = [5, 4.23, 6.4, 8.09, 3.20];
+const priceToDollars = price => `$${price.toFixed(2)}`;
+const priceTags = prices.map(priceToDollars);
+
+// Challenge 3 - easier solution
+const prices = [5, 4.23, 6.4, 8.09, 3.20];
+const priceTags = prices.map(price => '$' + price.toFixed(2));
+
