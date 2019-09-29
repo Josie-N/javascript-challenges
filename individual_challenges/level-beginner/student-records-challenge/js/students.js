@@ -18,7 +18,8 @@
 
 // But in this case, you'll be accessing array elements.
 
-var message = '';
+var message = "";
+var student;
 
 function print(message) {
   var outputDiv = document.getElementById("output");
@@ -29,9 +30,10 @@ function print(message) {
 // Our array: var students = [{},{},{},{},{}];
 
 // access each student object using a 'for' loop
-for(var i = 0; i < students.length; i++) {  // result: 0, 1, 2, 3, 4  (students.length = 5)
+for (var i = 0; i < students.length; i += 1) {  // result: 0, 1, 2, 3, 4  (students.length = 5)
   // store each student object in a variable
   var student = students[i];  // result: students[0], students[1], students[2], students[3], students[4]
+  message += '<h2>Student: ' + student.name + '</h2>';
 }
 
-print();
+print(message);
