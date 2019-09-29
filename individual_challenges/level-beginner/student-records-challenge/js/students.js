@@ -26,7 +26,6 @@ function print(message) {
   outputDiv.innerHTML = message;
 }
 
-// 1. Loop through each element of the array
 // Our array: var students = [{},{},{},{},{}];
 
 // access each student object using a 'for' loop
@@ -34,6 +33,9 @@ for (var i = 0; i < students.length; i += 1) {  // result: 0, 1, 2, 3, 4  (stude
   // store each student object in a variable
   var student = students[i];  // result: students[0], students[1], students[2], students[3], students[4]
   message += '<h2>Student: ' + student.name + '</h2>';
+  message += '<p>Track: ' + student.track + '</p>';
+  message += '<p>Achievements: ' + student.achievements + '</p>';
+  message += '<p>Points: ' + student.points + '</p>';
 }
 
 print(message);
