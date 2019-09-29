@@ -15,3 +15,7 @@
 // student.
 
 // But in this case, you'll be accessing array elements.
+
+function print(message) {
+  document.getElementById("output").innerHTML = "new content";
+}
