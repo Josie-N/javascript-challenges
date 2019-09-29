@@ -16,6 +16,11 @@
 
 // But in this case, you'll be accessing array elements.
 
+var message = '';
+
 function print(message) {
-  document.getElementById("output").innerHTML = "new content";
+  var outputDiv = document.getElementById("output");
+  outputDiv.innerHTML = message;
 }
+
+print();
