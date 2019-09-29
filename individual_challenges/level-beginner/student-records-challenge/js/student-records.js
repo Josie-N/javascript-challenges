@@ -28,5 +28,5 @@ var students = [
     track : "JavaScript Basics",
     achievements : 44,
     points : 2504
-  },
+  }
 ];
